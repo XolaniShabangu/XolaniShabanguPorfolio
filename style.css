@@ -1,0 +1,285 @@
+/* - SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+--- 01 TYPOGRAPHY SYSTEM
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+.container {
+  max-width: 120rem;
+  padding: 3.2rem 3.2rem;
+  margin: 0 auto;
+
+  background-color: #f8fafc;
+  border-radius: 15px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  /* font-size: 10px; */
+  /* percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  /* overflow-x: hidden; */
+  /* for smooth scrolling to the desired section */
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #10141f;
+}
+
+.grid-2--col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+  width: 95%;
+  border-radius: 12px;
+}
+
+.PPimg {
+  width: 20%;
+  border-radius: 50%;
+  margin-bottom: 1.6rem;
+}
+
+.section-hero {
+  padding: 9.6rem;
+}
+
+.head-text {
+  font-size: 6.2rem;
+  font-weight: 600;
+  letter-spacing: 1.1;
+  margin-bottom: 1.2rem;
+  font-family: "Poppins", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.secondary-text {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  font-family: "Poppins", Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+.main-text {
+  font-size: 1.8rem;
+  line-height: 1.2;
+  letter-spacing: 1.1px;
+  margin-bottom: 5rem;
+}
+
+.contact-button:link,
+.contact-button:visited {
+  padding: 1.6rem 3.2rem;
+  background-color: red;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 9px;
+
+  font-weight: 600;
+  font-size: 1.4rem;
+  color: white;
+
+  transition: all 0.3s;
+}
+
+.contact-button:hover,
+.contact-button:active {
+  background-color: rgb(164, 2, 2);
+}
+
+/* education */
+
+.section-education {
+  padding: 9.6rem 0;
+}
+
+.text-break {
+  display: flex;
+  justify-content: space-between;
+}
+
+.linebr {
+  height: 0.2rem;
+  width: 90rem;
+  background-color: #10141f6a;
+
+  margin-top: 1.6rem;
+}
+
+.list-item {
+  list-style: none;
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.margin-bottom-md {
+  margin-bottom: 2.4rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.2rem;
+  color: red;
+}
+.degree {
+  flex: 1; /* Ensures text takes available space */
+}
+
+.uni-name {
+  text-align: right; /* Aligns text to the right */
+  min-width: 200px; /* Prevents it from squishing too much */
+}
+
+.list-item:hover {
+  transform: scale(1.04);
+  transition: all 0.3s; /* Smooth transition */
+}
+
+/* Projects */
+
+.section-projects {
+  padding: 9.6rem 0;
+}
+
+/* .grid-3--col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+} */
+
+/* Grid Layout for Project Cards */
+.grid--3-cols {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  justify-items: center;
+  padding: 2rem 0;
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 1.6rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 350px;
+}
+
+.card:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Styling */
+.card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: fill;
+  border-radius: 5px;
+}
+
+/* Project Title */
+.card-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.card-link {
+  text-decoration: none;
+  color: rgb(2, 2, 123); /* Keep it the same as the title */
+  transition: color 0.3s ease-in-out;
+}
+
+.card-link:hover {
+  color: red; /* Change color on hover */
+}
+
+/* Project Description */
+.card-desc {
+  font-size: 1.4rem;
+  color: #666;
+  margin-top: 0.8rem;
+  line-height: 1.5;
+}
+
+/* Tech Stack Tags */
+.tech-stack {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 1rem;
+  flex-wrap: wrap; /* Allows wrapping if too many tags */
+}
+
+.tech-tag {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+/* Different Colors for Technologies */
+.html {
+  background-color: #e34c26;
+}
+
+.css {
+  background-color: #264de4;
+}
+
+.js {
+  background-color: #f7df1e;
+  color: #000;
+}
+
+.c-hash {
+  background-color: #61dafb;
+  color: #000;
+}
+
+/* contact */
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1.2rem;
+  color: #0077b5; /* LinkedIn blue for a subtle touch */
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #4a90e2;
+}
